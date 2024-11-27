@@ -1,0 +1,111 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Defines the document's language -->
+<head>
+  <meta charset="UTF-8"> <!-- Defines the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures the viewport for responsive design -->
+  <title>Spaghetti Bolognese Recipe</title> <!-- Sets the title of the webpage -->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Links to Bootstrap CSS library -->
+  <style>
+    body {
+      background-color: #f8f9fa; /* Sets background color for the entire page */
+    }
+
+    .recipe-title {
+      background-color: darkblue; /* Blue background color for title */
+      color: #ffffff; /* Text color for title */
+      padding: 20px 0; /* Adds padding to the title */
+      text-align: center; /* Aligns text to center */
+      margin-bottom: 30px; /* Adds margin at the bottom of the title */
+    }
+
+    .recipe-container {
+      background-color: #ffffff; /* White background color for recipe container */
+      border-radius: 10px; /* Adds rounded corners to the recipe container */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect to the recipe container */
+      padding: 20px; /* Adds padding inside the recipe container */
+    }
+
+    .video-container {
+      position: relative; /* Sets position relative for video container */
+      padding-bottom: 56.25%; /* Aspect ratio for responsive videos */
+      padding-top: 30px; /* Adds padding at the top of the video container */
+      height: 0; /* Sets initial height to 0 */
+      overflow: hidden; /* Hides overflow content */
+    }
+
+    .video-container iframe,  
+    .video-container object,  
+    .video-container embed {
+      position: absolute; /* Sets position absolute for embedded content */
+      top: 0; /* Aligns content to the top */
+      left: 0; /* Aligns content to the left */
+      width: 100%; /* Sets width to 100% */
+      height: 100%; /* Sets height to 100% */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid"> <!-- Container for the entire content -->
+  <div class="row">
+    <div class="col-12 recipe-title">
+      <h1>Spaghetti Bolognese Recipe</h1> <!-- Main title of the recipe -->
+      <h6><a href="gallery.html" style="color: lightblue;">----Gallery----</a></h6> <!-- Link to the gallery page -->
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="recipe-container p-4"> <!-- Container for recipe content -->
+        <h3>Ingredients:</h3> <!-- Subtitle for ingredients -->
+        <ul>
+          <!-- List of ingredients -->
+          <li>250g spaghetti</li>
+          <li>250g ground beef or pork</li>
+          <li>1 onion, finely chopped</li>
+          <li>2 cloves garlic, minced</li>
+          <li>2 carrots, grated</li>
+          <li>2 celery stalks, finely chopped</li>
+          <li>400g canned diced tomatoes</li>
+          <li>2 tablespoons tomato paste</li>
+          <li>1 teaspoon dried oregano</li>
+          <li>1 teaspoon dried basil</li>
+          <li>1/2 teaspoon red chili flakes (optional)</li>
+          <li>1/4 cup red wine (optional)</li>
+          <li>2 tablespoons olive oil</li>
+          <li>Salt and pepper to taste</li>
+          <li>Grated Parmesan cheese for serving</li>
+          <li>Fresh basil leaves for garnish</li>
+        </ul>
+        
+        <h3>Instructions:</h3> <!-- Subtitle for instructions -->
+        <ol>
+          <!-- List of cooking instructions -->
+          <li>Cook spaghetti according to package instructions until al dente. Drain and set aside.</li>
+          <li>Heat olive oil in a large skillet over medium heat. Add chopped onions and garlic, sauté until softened.</li>
+          <li>Add ground beef or pork to the skillet and cook until browned, breaking it up with a spoon.</li>
+          <li>Add grated carrots and chopped celery to the skillet. Cook for a few minutes until vegetables are tender.</li>
+          <li>Stir in canned diced tomatoes, tomato paste, dried oregano, dried basil, red chili flakes (if using), and red wine (if using). Season with salt and pepper.</li>
+          <li>Simmer the sauce for about 15-20 minutes until thickened.</li>
+          <li>Serve spaghetti topped with Bolognese sauce. Garnish with grated Parmesan cheese and fresh basil leaves.</li>
+        </ol>
+
+        <h3 class="mt-4">Video Tutorial:</h3> <!-- Subtitle for video tutorial -->
+        <div class="video-container mt-3">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yShBC-G-jrQ" title="Spaghetti Bolognese Recipe Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- Embedded video tutorial -->
+        <!-- Accelerometer: Think of it as a sensor that helps your device know when it's moving or being tilted.
+        Autoplay: This makes videos start playing on their own when you open a webpage or app, without you having to press anything.
+        Clipboard-write: It lets websites or apps copy things to your device's clipboard, so you can paste them elsewhere.
+        Encrypted-media: It's about playing protected videos or music in a secure way, like what you might find on streaming services.
+        Gyroscope: This sensor helps your device understand its orientation and how it's being rotated.
+        Picture-in-picture: It's when a video plays in a small window on your screen while you're doing other things, like browsing or chatting. -->
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Links to Bootstrap JavaScript library -->
+</body>
+</html>

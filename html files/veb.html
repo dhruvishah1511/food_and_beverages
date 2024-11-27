@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Defines the document's language -->
+<head>
+  <meta charset="UTF-8"> <!-- Defines the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures the viewport for responsive design -->
+  <title>Veg Biryani Recipe</title> <!-- Sets the title of the webpage -->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Links to Bootstrap CSS library -->
+  <style>
+    body {
+      background-color: #f8f9fa; /* Sets background color for the entire page */
+    }
+
+    .recipe-title {
+      background-color: darkblue; /* Blue background color for title */
+      color: #ffffff; /* Text color for title */
+      padding: 20px 0; /* Adds padding to the title */
+      text-align: center; /* Aligns text to center */
+      margin-bottom: 30px; /* Adds margin at the bottom of the title */
+    }
+
+    .recipe-container {
+      background-color: #ffffff; /* White background color for recipe container */
+      border-radius: 10px; /* Adds rounded corners to the recipe container */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect to the recipe container */
+      padding: 20px; /* Adds padding inside the recipe container */
+    }
+
+    .video-container {
+      position: relative; /* Sets position relative for video container */
+      padding-bottom: 56.25%; /* Aspect ratio for responsive videos */
+      padding-top: 30px; /* Adds padding at the top of the video container */
+      height: 0; /* Sets initial height to 0 */
+      overflow: hidden; /* Hides overflow content */
+    }
+
+    .video-container iframe,  
+    .video-container object,  
+    .video-container embed {
+      position: absolute; /* Sets position absolute for embedded content */
+      top: 0; /* Aligns content to the top */
+      left: 0; /* Aligns content to the left */
+      width: 100%; /* Sets width to 100% */
+      height: 100%; /* Sets height to 100% */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid"> <!-- Container for the entire content -->
+  <div class="row">
+    <div class="col-12 recipe-title">
+      <h1>Veg Biryani Recipe</h1> <!-- Main title of the recipe -->
+      <h6><a href="gallery.html" style="color: lightblue;">----Gallery----</a></h6> <!-- Link to the gallery page -->
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="recipe-container p-4"> <!-- Container for recipe content -->
+        <h3>Ingredients:</h3> <!-- Subtitle for ingredients -->
+        <ul>
+          <!-- List of ingredients -->
+          <li>1.5 cups basmati rice, soaked for 30 minutes</li>
+          <li>2 cups mixed vegetables (carrot, beans, peas, cauliflower), diced</li>
+          <li>1 onion, thinly sliced</li>
+          <li>2 tomatoes, chopped</li>
+          <li>1/2 cup yogurt</li>
+          <li>1/4 cup mint leaves, chopped</li>
+          <li>1/4 cup coriander leaves, chopped</li>
+          <li>2 green chilies, slit</li>
+          <li>1 tablespoon ginger-garlic paste</li>
+          <li>1 teaspoon biryani masala</li>
+          <li>1/2 teaspoon turmeric powder</li>
+          <li>1/2 teaspoon red chili powder</li>
+          <li>Whole spices: 1 bay leaf, 2-3 cloves, 2-3 green cardamoms, 1-inch cinnamon stick</li>
+          <li>2 tablespoons ghee or oil</li>
+          <li>Salt to taste</li>
+          <li>Fried onions for garnish (optional)</li>
+          <li>Saffron strands soaked in warm milk (optional)</li>
+        </ul>
+        
+        <h3>Instructions:</h3> <!-- Subtitle for instructions -->
+        <ol>
+          <!-- List of cooking instructions -->
+          <li>Heat ghee or oil in a large pot. Add the whole spices and sauté until fragrant.</li>
+          <li>Add thinly sliced onions and sauté until golden brown.</li>
+          <li>Add ginger-garlic paste and green chilies. Sauté until the raw smell disappears.</li>
+          <li>Add chopped tomatoes and cook until they turn soft and mushy.</li>
+          <li>Add diced vegetables and sauté for a few minutes.</li>
+          <li>Now, add yogurt, mint leaves, coriander leaves, biryani masala, turmeric powder, red chili powder, and salt. Mix well.</li>
+          <li>Drain the soaked basmati rice and add it to the pot. Mix gently.</li>
+          <li>Add 3 cups of water (adjust according to rice quality), cover the pot, and let it cook until the rice is almost done.</li>
+          <li>If using saffron, sprinkle saffron-infused milk on top of the rice.</li>
+          <li>Cover and cook for another 5-7 minutes until the rice is fully cooked and fluffy.</li>
+          <li>Garnish with fried onions (optional) and serve hot with raita or salad.</li>
+        </ol>
+
+        <h3 class="mt-4">Video Tutorial:</h3> <!-- Subtitle for video tutorial -->
+        <div class="video-container mt-3">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HP2bVwNHJfM" title="Veg Biryani Recipe Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- Embedded video tutorial -->
+        <!-- Accelerometer: Think of it as a sensor that helps your device know when it's moving or being tilted.
+        Autoplay: This makes videos start playing on their own when you open a webpage or app, without you having to press anything.
+        Clipboard-write: It lets websites or apps copy things to your device's clipboard, so you can paste them elsewhere.
+        Encrypted-media: It's about playing protected videos or music in a secure way, like what you might find on streaming services.
+        Gyroscope: This sensor helps your device understand its orientation and how it's being rotated.
+        Picture-in-picture: It's when a video plays in a small window on your screen while you're doing other things, like browsing or chatting. -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Links to Bootstrap JavaScript library -->
+</body>
+</html>

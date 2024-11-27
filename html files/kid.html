@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid-Friendly Recipes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for styling */
+        .bg-orange {
+            height: 400px;
+      background:linear-gradient(to bottom, #FFA500, #FF8C00, #FF6347);
+        }
+
+        .bg-image {
+            background-size: cover;
+            background-position: center;
+            height: 500px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            padding-left: 20px; /* Add padding to align text to the left */
+        }
+
+        .bg-image h1,
+        .bg-image p,
+        .bg-image a {
+            margin-bottom: 20px;
+            text-align: left; /* Align text to the left */
+            color: white; /* Adjust text color */
+        }
+
+        .card {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: blur(0); /* Initially no blur */
+        }
+
+        .card-body {
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value as needed */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            transition: filter 0.5s ease; /* Smooth transition for the blur effect */
+        }
+        body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+
+  .why-kid-friendly {
+    padding: 50px 0;
+  }
+
+  .reason {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .reason:hover {
+    transform: translateY(-5px);
+  }
+
+  .reason h3 {
+    color: #6c757d;
+  }
+
+  .reason p {
+    color: #495057;
+  }
+    </style>
+</head>
+<body>
+    <div class="bg-orange">
+        <div class="container bg-image" style="background-image: url('your-background-image.jpg');">
+            <div class="row">
+                <div class="col-lg-12 text-white">
+                    <h1>Kid-Friendly Recipes</h1>
+                    <p>Looking for delicious and nutritious Kid-Friendly? You've come to the right place!</p>
+                    <p><a href="home.html" class="text-white">Home</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <section class="bg-light">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Recipe Cards -->
+                <!-- card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img1.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Spaghetti Carbonara</h5>
+                            <p class="card-text">Classic Italian pasta dish with creamy egg and cheese sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal1">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal2">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3-->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal3">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal4">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal5">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal6">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 7 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal7">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 8 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal8">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 9 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal9">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 10 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal10">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 11 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal11">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 12 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                            <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                            <button type="button" class="btn btn-primary view-recipe-btn" data-bs-toggle="modal" data-bs-target="#recipeModal12">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Modals -->
+    <div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel1">Vegetarian Quinoa Salad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>1 cup broccoli florets</li>
+                        <li>1 cup bell peppers, sliced</li>
+                        <li>1 cup snow peas</li>
+                        <li>1 cup carrots, julienned</li>
+                        <li>1 cup firm tofu, cubed</li>
+                        <li>3 tbsp soy sauce</li>
+                        <li>2 tbsp hoisin sauce</li>
+                        <li>1 tbsp sesame oil</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>1 tsp ginger, minced</li>
+                        <li>2 green onions, chopped</li>
+                        <li>Sesame seeds for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Heat sesame oil in a pan, add tofu and cook until golden brown.</li>
+                        <li>Add garlic and ginger, cook for 1 minute.</li>
+                        <li>Add vegetables and stir-fry until tender-crisp.</li>
+                        <li>Stir in soy sauce, hoisin sauce, and green onions. Cook for 2 minutes.</li>
+                        <li>Serve hot, garnished with sesame seeds.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel2">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel3">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal4" tabindex="-1" aria-labelledby="recipeModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel4">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal5" tabindex="-1" aria-labelledby="recipeModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel5">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal6" tabindex="-1" aria-labelledby="recipeModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel6">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal7" tabindex="-1" aria-labelledby="recipeModalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel7">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal8" tabindex="-1" aria-labelledby="recipeModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel8">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal9" tabindex="-1" aria-labelledby="recipeModalLabel9" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel9">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal10" tabindex="-1" aria-labelledby="recipeModalLabel10" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel10">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal11" tabindex="-1" aria-labelledby="recipeModalLabel11" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel11">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="recipeModal12" tabindex="-1" aria-labelledby="recipeModalLabel12" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel12">Pasta Carbonara Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>8 oz spaghetti</li>
+                        <li>4 slices bacon, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 large eggs</li>
+                        <li>1/2 cup grated Parmesan cheese</li>
+                        <li>Salt and black pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                        <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                        <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                        <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="why-kid-friendly">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>Kid-Friendly Recipes</h2>
+              <p class="lead">Make mealtime fun and enjoyable for kids with these delicious and nutritious recipes.</p>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="reason">
+                <h3>Fun and Creative</h3>
+                <p>Get your kids excited about eating with fun and creative recipes they'll love to help prepare and enjoy.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="reason">
+                <h3>Healthy Ingredients</h3>
+                <p>Create nutritious meals using wholesome ingredients that provide essential nutrients for growing kids.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="reason">
+                <h3>Easy to Make</h3>
+                <p>Save time in the kitchen with easy-to-follow recipes that require minimal preparation and cooking time.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="reason">
+                <h3>Familiar Flavors</h3>
+                <p>Introduce new foods and flavors gradually by incorporating familiar ingredients into kid-friendly dishes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

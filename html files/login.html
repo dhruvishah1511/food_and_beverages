@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('../images/fab.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            margin-bottom: 1rem;
+        }
+        .form-group {
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 1rem;
+            }
+            body {
+                background-size: contain; /* Adjust background image size on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="text-center">Login</h2>
+        <form id="login-form" novalidate>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required minlength="6">
+                <div class="invalid-feedback">
+                    Password must be at least 6 characters long.
+                </div>
+            </div>
+            <!-- Error Message Alert -->
+            <div class="alert alert-danger d-none" id="login-error-message">
+                Please check your email and password.
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <p class="text-center mt-2">Don't have an account? <a href="create_account.html">Create one</a></p>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var form = event.target;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Retrieve stored credentials from localStorage
+            var storedEmail = localStorage.getItem('userEmail');
+            var storedPassword = localStorage.getItem('userPassword');
+
+            var errorMessage = document.getElementById('login-error-message');
+
+            if (email === storedEmail && password === storedPassword) {
+                // Redirect to home page if credentials are correct
+                window.location.href = 'home.html';
+            } else {
+                // Show error message if credentials are incorrect
+                errorMessage.classList.remove('d-none'); // Show error message
+            }
+
+            // Add validation class to form
+            form.classList.add('was-validated');
+        });
+    </script>
+</body>
+</html>

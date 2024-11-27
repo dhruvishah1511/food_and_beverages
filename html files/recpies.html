@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Recipes</title>
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+<style>
+  /* Custom Styles */
+    .navbar-container {
+      background-color: #17a2b8; /* Set your desired background color */
+    }
+
+    .navbar-brand img {
+      height: 40px; /* Adjust the height of the logo */
+      width: auto;
+      margin-right: 10px; /* Add some spacing between the logo and text */
+    }
+    .navbar-brand h5 {
+      color: white; /* Set the color of the website name */
+      margin: 0;
+    }
+    
+  .card {
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+  .card-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(0); /* Initially no blur */
+  }
+  .card-body {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value as needed */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    transition: filter 0.5s ease; /* Smooth transition for the blur effect */
+  }
+  .recipe-details {
+    display: none;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Navbar Method -->
+    <div class="navbar-container sticky-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 align-self-center">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#">
+                <img src="../images/logo.jpeg" alt="logo" style="width:60px;">
+              </a>
+              <h5>Food and Beverages</h5>
+            </nav>
+          </div>
+          <div class="col-lg-7">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primarynav" aria-controls="primarynav" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div id="primarynav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="recpies.html">Recipes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="teachniques.html">Techniques</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="addyours.html">Add Yours</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Recipe -->
+    <div class="background-image">
+        <section class="bg-light">
+          <div class="container">
+            <h2 class="text-center mb-4">Recipe Collections and Cookbooks</h2>
+            <div class="row">
+              <!-- Recipe Cards -->
+              <!-- card 1 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img1.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Spaghetti Carbonara</h5>
+                    <p class="card-text">Classic Italian pasta dish with creamy egg and cheese sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal1">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img2.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Alfredo Pasta</h5>
+                    <p class="card-text">Creamy pasta loaded with tender chicken in a rich Alfredo sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal2">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img3.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Margherita Pizza</h5>
+                    <p class="card-text">Simple yet flavorful pizza topped with fresh mozzarella, tomatoes, and basil.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal3">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img4.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Classic Beef Burger</h5>
+                    <p class="card-text"> Juicy beef patty served on a toasted bun with cheese and toppings.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal4">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 5 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img5.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Caprese Salad</h5>
+                    <p class="card-text">Fresh and vibrant salad featuring tomatoes, mozzarella, basil, and balsamic glaze.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal5">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 6 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img6.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Penne Arrabbiata</h5>
+                    <p class="card-text"> Spicy tomato sauce tossed with penne pasta for a flavorful Italian meal.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal6">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 7 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img7.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Vegetable Stir Fry</h5>
+                    <p class="card-text">Colorful mixed vegetables stir-fried in a savory soy sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal7">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 8 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img8.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Teriyaki Stir-Fry</h5>
+                    <p class="card-text">Tender chicken and mixed vegetables glazed in a sweet and savory teriyaki sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal8">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 9 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img9.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Vegetarian Quinoa Salad</h5>
+                    <p class="card-text">Nutritious salad featuring quinoa, fresh vegetables, and a zesty dressing.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal9">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 10 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img10.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Beef Lasagna</h5>
+                    <p class="card-text">Layers of pasta, seasoned beef, marinara sauce, and melted cheese baked to perfection.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal10">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 11 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img11.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Baked Salmon</h5>
+                    <p class="card-text"> Tender salmon fillets seasoned and baked until flaky and delicious.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal11">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 12 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img12.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Tikka Masala</h5>
+                    <p class="card-text">Creamy and aromatic Indian curry with tender chicken pieces.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal12">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 13 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img13.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Shrimp Scampi</h5>
+                    <p class="card-text">Succulent shrimp sautéed in garlic, butter, and white wine sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal13">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 14-->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img14.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Caesar Salad</h5>
+                    <p class="card-text">Crisp romaine lettuce tossed in a creamy Caesar dressing with Parmesan cheese and croutons.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal14">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 15 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img15.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Mushroom Risotto</h5>
+                    <p class="card-text">Creamy Italian rice dish cooked with mushrooms and Parmesan cheese.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal15">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 16 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img16.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Beef Tacos</h5>
+                    <p class="card-text"> Flavorful seasoned beef served in warm tortillas with toppings.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal16">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 17 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img17.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Curry</h5>
+                    <p class="card-text">Fragrant and spicy curry made with tender chicken and aromatic spices.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal17">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 18 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img18.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Greek Salad</h5>
+                    <p class="card-text"> Fresh and crunchy salad with tomatoes, cucumbers, olives, feta cheese, and Greek dressing.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal18">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 19 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img19.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Baked Ziti</h5>
+                    <p class="card-text">Baked pasta dish layered with ziti, marinara sauce, and melted cheese.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal19">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 20 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img20.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Teriyaki Chicken Wings</h5>
+                    <p class="card-text"> Sticky and flavorful chicken wings glazed in teriyaki sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal20">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 21 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img21.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Beef Stir Fry</h5>
+                    <p class="card-text">Tender beef strips stir-fried with colorful vegetables in a savory sauce.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal21">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 22 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img22.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Veggie Pizza</h5>
+                    <p class="card-text">Veggie-loaded pizza topped with a variety of fresh vegetables and cheese.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal22">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 23 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img23.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Noodle Soup</h5>
+                    <p class="card-text">Comforting soup with tender chicken, vegetables, and noodles in a flavorful broth.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal23">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 24 -->
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-image" style="background-image: url('../images/img24.png');"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chocolate Chip Cookies</h5>
+                    <p class="card-text">Classic homemade cookies loaded with chocolate chips for a sweet treat.</p>
+                    <button type="button" class="btn btn-primary view-recipe-btn" data-toggle="modal" data-target="#recipeModal24">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+             
+      <!-- Recipe Modals -->
+      <!-- modal 1 -->
+      <div class="modal fade" id="recipeModal1" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel1">
+                      Spaghetti Carbonara</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>1 cup broccoli florets</li>
+                        <li>1 cup bell peppers, sliced</li>
+                        <li>1 cup snow peas</li>
+                        <li>1 cup carrots, julienned</li>
+                        <li>1 cup firm tofu, cubed</li>
+                        <li>3 tbsp soy sauce</li>
+                        <li>2 tbsp hoisin sauce</li>
+                        <li>1 tbsp sesame oil</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>1 tsp ginger, minced</li>
+                        <li>2 green onions, chopped</li>
+                        <li>Sesame seeds for garnish</li>
+                    </ul>
+                    <h6>Instructions:</h6>
+                    <ol>
+                        <li>Heat sesame oil in a pan, add tofu and cook until golden brown.</li>
+                        <li>Add garlic and ginger, cook for 1 minute.</li>
+                        <li>Add vegetables and stir-fry until tender-crisp.</li>
+                        <li>Stir in soy sauce, hoisin sauce, and green onions. Cook for 2 minutes.</li>
+                        <li>Serve hot, garnished with sesame seeds.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- modal 2 -->
+      <div class="modal fade" id="recipeModal2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel2">Chicken Alfredo Pasta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 3 -->
+      <div class="modal fade" id="recipeModal3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel3">Margherita Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 4 -->
+      <div class="modal fade" id="recipeModal4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel4">Classic Beef Burger</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 5 -->
+      <div class="modal fade" id="recipeModal5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel5">Caprese Salad</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+        <!-- modal 6 -->
+      </div><div class="modal fade" id="recipeModal6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel6">Penne Arrabbiata</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 7 -->
+      <div class="modal fade" id="recipeModal7" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel7">Vegetable Stir Fry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 8 -->
+      <div class="modal fade" id="recipeModal8" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel8">Chicken Teriyaki Stir-Fry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 9 -->
+      <div class="modal fade" id="recipeModal9" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel9">Vegetarian Quinoa Salad</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 10 -->
+      <div class="modal fade" id="recipeModal10" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel10">Beef Lasagna</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 11 -->
+      <div class="modal fade" id="recipeModal11" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel11">Baked Salmon</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 12 -->
+      <div class="modal fade" id="recipeModal12" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel12">Chicken Tikka Masala</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Ingredients:</h6>
+              <ul>
+                <li>8 oz spaghetti</li>
+                <li>4 slices bacon, diced</li>
+                <li>2 cloves garlic, minced</li>
+                <li>2 large eggs</li>
+                <li>1/2 cup grated Parmesan cheese</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Fresh parsley for garnish</li>
+              </ul>
+              <h6>Instructions:</h6>
+              <ol>
+                <li>Cook spaghetti according to package instructions.</li>
+                <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+                <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+                <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+                <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+                <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- modal 13 -->
+     <div class="modal fade" id="recipeModal13" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Shrimp Scampi</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 14 -->
+     <div class="modal fade" id="recipeModal14" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Caesar Salad</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 15 -->
+     <div class="modal fade" id="recipeModal15" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Mushroom Risotto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 16 -->
+     <div class="modal fade" id="recipeModal16" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Beef Tacos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 17 -->
+     <div class="modal fade" id="recipeModal17" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Chicken Curry</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 18 -->
+     <div class="modal fade" id="recipeModal18" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Greek Salad</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 19 -->
+     <div class="modal fade" id="recipeModal19" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">
+              Baked Ziti</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 20 -->
+     <div class="modal fade" id="recipeModal20" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Teriyaki Chicken Wings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 21 -->
+     <div class="modal fade" id="recipeModal21" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Beef Stir Fry</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 22 -->
+     <div class="modal fade" id="recipeModal22" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Veggie Pizza</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 23 -->
+     <div class="modal fade" id="recipeModal23" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Chicken Noodle Soup</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- modal 24 -->
+     <div class="modal fade" id="recipeModal24" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel12">Chocolate Chip Cookies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Ingredients:</h6>
+            <ul>
+              <li>8 oz spaghetti</li>
+              <li>4 slices bacon, diced</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 large eggs</li>
+              <li>1/2 cup grated Parmesan cheese</li>
+              <li>Salt and black pepper to taste</li>
+              <li>Fresh parsley for garnish</li>
+            </ul>
+            <h6>Instructions:</h6>
+            <ol>
+              <li>Cook spaghetti according to package instructions.</li>
+              <li>In a skillet, cook bacon until crispy. Add garlic and cook until fragrant.</li>
+              <li>In a bowl, whisk together eggs and Parmesan cheese.</li>
+              <li>Drain cooked pasta and immediately toss with bacon and garlic mixture.</li>
+              <li>Quickly add egg and cheese mixture, stirring constantly until creamy.</li>
+              <li>Season with salt and pepper, garnish with parsley, and serve hot.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+  
+
+  
+</body>
+</html>
